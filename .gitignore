@@ -1,0 +1,17 @@
+# Dependências e arquivos gerados
+node_modules/
+*.log
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Configurações pessoais de editores
+.vscode/
+.idea/
+
+# Arquivos criados pelo sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini

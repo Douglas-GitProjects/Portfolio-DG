@@ -1,3 +1,7 @@
+/* ========================================================================== 
+   EFEITO DE PROFUNDIDADE DO CARTÃO DA APRESENTAÇÃO
+   ========================================================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
   const card = document.querySelector('.hero__code-card');
   if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

@@ -1,3 +1,7 @@
+/* ========================================================================== 
+   TEMA CLARO E ESCURO
+   ========================================================================== */
+
 (() => {
   const root = document.documentElement;
   const savedTheme = localStorage.getItem('portfolio-theme');

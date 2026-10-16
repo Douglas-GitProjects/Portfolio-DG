@@ -1,4 +1,6 @@
-// Conteúdo exibido nos cards e no modal de cada projeto.
+/* ========================================================================== 
+   DADOS DOS PROJETOS
+   ========================================================================== */
 const portfolioProjects = {
   'dev-cloud': {
     title: 'Dev Cloud',
@@ -103,6 +105,9 @@ const portfolioProjects = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* ------------------------------------------------------------------------
+     ELEMENTOS DO MODAL
+     ------------------------------------------------------------------------ */
   const modal = document.querySelector('#project-modal');
   if (!modal) return;
 
@@ -127,7 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeImage = 0;
   let touchStartX = 0;
 
-  // Atualiza a imagem atual e mostra os controles somente quando necessário.
+  /* ------------------------------------------------------------------------
+     CARROSSEL DE IMAGENS
+     ------------------------------------------------------------------------ */
   const renderImage = () => {
     const images = activeProject?.images || [];
     const hasImages = images.length > 0;
@@ -162,7 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
     trigger?.focus();
   };
 
-  // Abre o modal usando o projeto indicado no atributo data-project.
+  /* ------------------------------------------------------------------------
+     ABERTURA E FECHAMENTO DO MODAL
+     ------------------------------------------------------------------------ */
   document.querySelectorAll('[data-project]').forEach((button) => {
     button.addEventListener('click', () => {
       const project = portfolioProjects[button.dataset.project];

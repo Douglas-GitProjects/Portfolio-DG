@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Menu responsivo.
+  /* ------------------------------------------------------------------------
+     MENU RESPONSIVO
+     ------------------------------------------------------------------------ */
   const menuButton = document.querySelector('.header__menu');
   const navigation = document.querySelector('.header__nav');
   const navLinks = [...document.querySelectorAll('.header__list a')];
@@ -29,7 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const portrait = document.querySelector('.about__portrait img');
   portrait?.addEventListener('error', () => (portrait.hidden = true));
 
-  // Animação de entrada das seções.
+  /* ------------------------------------------------------------------------
+     ANIMAÇÕES E NAVEGAÇÃO ENTRE SEÇÕES
+     ------------------------------------------------------------------------ */
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(
@@ -63,7 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
-  // Prepara a mensagem e abre o aplicativo de e-mail do visitante.
+  /* ------------------------------------------------------------------------
+     FORMULÁRIO DE CONTATO
+     ------------------------------------------------------------------------ */
   const form = document.querySelector('#contact-form');
   const feedback = document.querySelector('#contact-feedback');
   form?.addEventListener('submit', (event) => {
