@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Douglas Galdino, estudante de Desenvolvimento de Sistemas e desenvolvedor Front-End."
+    />
+    <meta name="theme-color" content="#123DB8" />
+    <title>Douglas Galdino | Desenvolvedor Front-End</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsividade.css" />
+    <script src="js/tema.js" defer></script>
+    <script src="js/projetos.js" defer></script>
+    <script src="js/carrosel.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Cabeçalho e navegação principal -->
+    <header class="header" id="topo">
+      <div class="container header__container">
+        <a href="#inicio" class="header__logo" aria-label="Douglas Galdino — início">DG</a>
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="header__nav" id="menu-principal" aria-label="Navegação principal">
+          <ul class="header__list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a
+            class="header__github"
+            href="https://github.com/Douglas-GitProjects"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de Douglas Galdino"
+            ><i class="fa-brands fa-github" aria-hidden="true"></i
+          ></a>
+          <button
+            type="button"
+            class="header__theme"
+            aria-label="Ativar modo claro"
+            title="Alternar tema"
+          >
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- Apresentação -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__glow hero__glow--one"></div>
+        <div class="hero__glow hero__glow--two"></div>
+        <div class="container hero__container">
+          <div class="hero__content reveal">
+            <p class="section-kicker">Olá, eu sou</p>
+            <h1 class="hero__title" id="hero-title">Douglas <span>Galdino</span></h1>
+            <p class="hero__role">Desenvolvedor Front-End</p>
+            <p class="hero__description">
+              Transformo ideias em experiências digitais acessíveis, responsivas e agradáveis de
+              usar.
+            </p>
+            <div class="hero__actions">
+              <a href="#portfolio" class="btn btn--primary"
+                >Ver projetos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i
+              ></a>
+              <a href="#contato" class="btn btn--secondary"
+                >Contato <i class="fa-regular fa-paper-plane" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+          <div class="hero__visual reveal" aria-label="Resumo das especialidades de Douglas">
+            <div class="hero__code-card">
+              <div class="hero__code-top">
+                <span></span><span></span><span></span><small>portfolio.js</small>
+              </div>
+                    <pre aria-hidden="true"><code><span class="code-blue">const</span> douglas = {
+                    foco: <span class="code-cyan">'Front-End'</span>,
+                    cria: <span class="code-cyan">'interfaces úteis'</span>,
+                    aprende: <span class="code-cyan">true</span>
+                    };</code></pre>
+            </div>
+            <div class="hero__badge hero__badge--top">
+              <i class="fa-solid fa-code"></i> Código limpo
+            </div>
+            <div class="hero__badge hero__badge--bottom">
+              <i class="fa-solid fa-universal-access"></i> Acessibilidade
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mim -->
+      <section class="about section" id="sobre" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Um pouco sobre mim</p>
+            <h2 id="about-title">Sobre mim</h2>
+          </div>
+          <div class="about__intro reveal">
+            <div class="about__portrait" aria-label="Douglas Galdino">
+              <img
+                src="assets/images/perfil.jpg"
+                alt="Foto de Douglas Galdino"
+                width="800"
+                height="1065"
+                loading="lazy"
+              /><span aria-hidden="true">DG</span>
+            </div>
+            <div class="about__copy">
+              <p>
+                Sou estudante de Desenvolvimento de Sistemas na Etec Sebrae e gosto de transformar
+                problemas em interfaces claras, funcionais e inclusivas.
+              </p>
+              <p>
+                Minha jornada reúne desenvolvimento web, design de interfaces e projetos em equipe.
+                Busco evoluir a cada entrega e construir produtos que façam sentido para as pessoas.
+              </p>
+              <a href="#formacao" class="text-link"
+                >Conheça minha formação <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+          <div class="about__cards" aria-label="Principais competências">
+            <article class="about__card reveal">
+              <div class="about__card-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Front-End</h3>
+              <p>Interfaces semânticas, responsivas e interativas com HTML, CSS e JavaScript.</p>
+            </article>
+            <article class="about__card reveal">
+              <div class="about__card-icon"><i class="fa-solid fa-people-group"></i></div>
+              <h3>Colaboração</h3>
+              <p>Comunicação, organização e trabalho em equipe com Git e GitHub.</p>
+            </article>
+            <article class="about__card reveal">
+              <div class="about__card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <h3>Evolução constante</h3>
+              <p>Aprendizado contínuo com atenção a acessibilidade, UX e qualidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tecnologias e ferramentas -->
+      <section class="technologies" id="tecnologias" aria-labelledby="technologies-title">
+        <div class="container technologies__heading">
+          <p class="section-kicker">O que uso para criar</p>
+          <h2 id="technologies-title">Tecnologias e ferramentas</h2>
+          <p>
+            Conhecimentos que fazem parte da minha rotina de estudos e dos projetos que desenvolvo.
+          </p>
+        </div>
+        <div class="technology-marquee" aria-label="Tecnologias e ferramentas que utilizo">
+          <div class="technology-marquee__track">
+            <div class="technology-marquee__group">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span
+              ><span><i class="fa-brands fa-css3-alt"></i> CSS3</span
+              ><span><i class="fa-brands fa-js"></i> JavaScript</span
+              ><span><i class="fa-brands fa-python"></i> Python</span
+              ><span><i class="fa-solid fa-mobile-screen"></i> Kotlin</span
+              ><span><i class="fa-brands fa-git-alt"></i> Git</span
+              ><span><i class="fa-brands fa-github"></i> GitHub</span
+              ><span><i class="fa-solid fa-code"></i> VS Code</span
+              ><span><i class="fa-brands fa-figma"></i> Figma</span
+              ><span><i class="fa-brands fa-android"></i> Android Studio</span>
+            </div>
+            <div class="technology-marquee__group" aria-hidden="true">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span
+              ><span><i class="fa-brands fa-css3-alt"></i> CSS3</span
+              ><span><i class="fa-brands fa-js"></i> JavaScript</span
+              ><span><i class="fa-brands fa-python"></i> Python</span
+              ><span><i class="fa-solid fa-mobile-screen"></i> Kotlin</span
+              ><span><i class="fa-brands fa-git-alt"></i> Git</span
+              ><span><i class="fa-brands fa-github"></i> GitHub</span
+              ><span><i class="fa-solid fa-code"></i> VS Code</span
+              ><span><i class="fa-brands fa-figma"></i> Figma</span
+              ><span><i class="fa-brands fa-android"></i> Android Studio</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Trabalhos selecionados</p>
+            <h2 id="portfolio-title">Portfólio</h2>
+            <p>Projetos que mostram minha evolução entre estudo, design e desenvolvimento.</p>
+          </div>
+          <div class="portfolio__group">
+            <h3>Projetos em destaque</h3>
+            <div class="portfolio__grid">
+              <article class="project-card project-card--featured reveal">
+                <div class="project-card__preview">
+                  <img
+                    src="assets/projetos/dev-cloud/capa.jpg"
+                    alt="Página inicial do projeto Dev Cloud"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h4>Dev Cloud</h4>
+                  <p>
+                    Uma landing page que marcou meus primeiros passos construindo interfaces para a
+                    web.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                  </div>
+                  <button type="button" class="project-card__button" data-project="dev-cloud">
+                    Conhecer projeto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+              </article>
+              <article class="project-card project-card--featured reveal">
+                <div class="project-card__preview">
+                  <img
+                    src="assets/projetos/pipoca-poc/capa.jpg"
+                    alt="Página inicial do projeto Pipoca Poc"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h4>Pipoca Poc</h4>
+                  <p>
+                    Uma vitrine digital alegre e direta para apresentar produtos e aproximar a marca
+                    de seus clientes.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>UI</span><span>Responsivo</span><span>JavaScript</span>
+                  </div>
+                  <button type="button" class="project-card__button" data-project="pipoca-poc">
+                    Conhecer projeto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+              </article>
+              <article class="project-card project-card--featured reveal">
+                <div class="project-card__preview">
+                  <img
+                    src="assets/projetos/espectrocare/capa.jpg"
+                    alt="Página inicial da plataforma EspectroCare"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__badge">Projeto acadêmico</span>
+                  <h4>EspectroCare</h4>
+                  <p>
+                    Plataforma do TCC criada para acolher, informar e conectar famílias a
+                    profissionais especializados.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>Acessibilidade</span><span>UX</span><span>Equipe</span>
+                  </div>
+                  <button type="button" class="project-card__button" data-project="espectrocare">
+                    Conhecer projeto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="portfolio__group portfolio__group--other">
+            <h3>Aplicativos acadêmicos</h3>
+            <div class="portfolio__grid">
+              <article class="project-card project-card--app reveal">
+                <div class="project-card__preview project-card__preview--phone">
+                  <img
+                    src="assets/projetos/conversor/capa.jpeg"
+                    alt="Tela do aplicativo Conversor de moedas"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__badge">Projeto acadêmico</span>
+                  <h4>Conversor de moedas</h4>
+                  <p>
+                    Aplicativo Android para transformar valores em reais usando cotações de outras
+                    moedas.
+                  </p>
+                  <button type="button" class="project-card__button" data-project="conversor">
+                    Conhecer projeto <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+              <article class="project-card project-card--app reveal">
+                <div class="project-card__preview project-card__preview--phone">
+                  <img
+                    src="assets/projetos/consulta-cep/capa.jpeg"
+                    alt="Tela do aplicativo Busca CEP"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__badge">Projeto acadêmico</span>
+                  <h4>Consulta CEP</h4>
+                  <p>
+                    Aplicativo que transforma um CEP em informações de endereço de forma rápida e
+                    organizada.
+                  </p>
+                  <button type="button" class="project-card__button" data-project="consulta-cep">
+                    Conhecer projeto <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+              <article class="project-card project-card--app reveal">
+                <div class="project-card__preview project-card__preview--placeholder">
+                  <i class="fa-solid fa-hand-scissors"></i><span>Jokenpô</span>
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__badge">Projeto acadêmico</span>
+                  <h4>Jokenpô</h4>
+                  <p>
+                    Um jogo mobile simples criado para praticar lógica, estados e interação no
+                    Android.
+                  </p>
+                  <button type="button" class="project-card__button" data-project="jokenpo">
+                    Conhecer projeto <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+              <article class="project-card project-card--app reveal">
+                <div class="project-card__preview project-card__preview--placeholder">
+                  <i class="fa-solid fa-user-shield"></i><span>Login App</span>
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__badge">Projeto acadêmico</span>
+                  <h4>Aplicativo de login</h4>
+                  <p>
+                    Uma experiência de autenticação criada para estudar formulários, navegação e
+                    integração com API.
+                  </p>
+                  <button type="button" class="project-card__button" data-project="login-app">
+                    Conhecer projeto <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formação e cursos -->
+      <section class="education section" id="formacao" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Minha trajetória</p>
+            <h2 id="education-title">Cursos e formação</h2>
+          </div>
+          <div class="education__layout">
+            <article class="education__main reveal">
+              <span class="education__status">Formação principal</span>
+              <h3>Técnico em Desenvolvimento de Sistemas</h3>
+              <dl>
+                <div>
+                  <dt>Instituição</dt>
+                  <dd>Etec Sebrae</dd>
+                </div>
+                <div>
+                  <dt>Modalidade</dt>
+                  <dd>M-Tec</dd>
+                </div>
+                <div>
+                  <dt>Conclusão</dt>
+                  <dd>Dezembro de 2026</dd>
+                </div>
+              </dl>
+            </article>
+            <div class="education__courses reveal">
+              <div class="education__group">
+                <h3>Em andamento</h3>
+                <ul>
+                  <li>
+                    <span>Desenvolvimento Front-End</span>
+                    <small>Serasa Experian + PROA</small>
+                  </li>
+                  <li>
+                    <span>Engenharia de Software</span>
+                    <small>FIAP Nano</small>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="education__group">
+                <h3>Concluídos</h3>
+                <ul>
+                  <li>
+                    <span>Jornada Python</span>
+                    <small>Hashtag</small>
+                  </li>
+                  <li>
+                    <span>Jornada da Inteligência Artificial</span>
+                    <small>Hashtag</small>
+                  </li>
+                  <li>
+                    <span>Introdução à Cibersegurança</span>
+                    <small>Cisco Networking Academy</small>
+                  </li>
+                  <li>
+                    <span>Introdução à IA Moderna</span>
+                    <small>Cisco Networking Academy</small>
+                  </li>
+                  <li>
+                    <span>User Experience</span>
+                    <small>FIAP</small>
+                  </li>
+                  <li>
+                    <span>Design Gráfico</span>
+                    <small>FIAP</small>
+                  </li>
+                  <li>
+                    <span>Desenvolvimento Pessoal</span>
+                    <small>PROA</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section class="contact section" id="contato" aria-labelledby="contact-title">
+        <div class="contact__glow"></div>
+        <div class="container contact__container">
+          <div class="contact__content reveal">
+            <p class="section-kicker">Entre em contato</p>
+            <h2 id="contact-title">Vamos <span>conversar?</span></h2>
+            <p>
+              Estou aberto a oportunidades, projetos e novas conexões. Conte um pouco sobre o que
+              você tem em mente.
+            </p>
+            <div class="contact__socials">
+              <a
+                href="https://www.linkedin.com/in/douglasgaldinodasilva"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a
+              ><a
+                href="https://github.com/Douglas-GitProjects"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-github"></i><span>GitHub</span></a
+              >
+            </div>
+          </div>
+          <form class="contact__form reveal" id="contact-form">
+            <div class="contact__field">
+              <label for="contact-name">Nome</label
+              ><input
+                type="text"
+                id="contact-name"
+                name="name"
+                autocomplete="name"
+                placeholder="Como você gostaria de ser chamado?"
+                required
+              />
+            </div>
+            <div class="contact__field">
+              <label for="contact-email">Email</label
+              ><input
+                type="email"
+                id="contact-email"
+                name="email"
+                autocomplete="email"
+                placeholder="voce@exemplo.com"
+                required
+              />
+            </div>
+            <div class="contact__field">
+              <label for="contact-subject">Assunto</label
+              ><input
+                type="text"
+                id="contact-subject"
+                name="subject"
+                placeholder="Sobre o que vamos conversar?"
+                required
+              />
+            </div>
+            <div class="contact__field">
+              <label for="contact-message">Mensagem</label
+              ><textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Escreva sua mensagem aqui..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary contact__submit">
+              <i class="fa-regular fa-paper-plane"></i> Enviar mensagem
+            </button>
+            <p class="contact__helper">
+              Seu aplicativo de e-mail será aberto para concluir o envio.
+            </p>
+            <p class="contact__feedback" id="contact-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <p>&copy; <span id="ano-atual">2026</span> Douglas Galdino.</p>
+        <a href="#topo">Voltar ao topo <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <!-- Janela com os detalhes de cada projeto -->
+    <dialog class="project-modal" id="project-modal" aria-labelledby="modal-project-title">
+      <div class="project-modal__container">
+        <button type="button" class="project-modal__close" aria-label="Fechar detalhes">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="project-modal__visual" id="modal-project-visual">
+          <div class="project-modal__stage">
+            <img id="modal-project-image" src="" alt="" />
+            <div class="project-modal__fallback" id="modal-project-fallback" hidden></div>
+          </div>
+          <button
+            type="button"
+            class="project-modal__arrow project-modal__arrow--previous"
+            aria-label="Imagem anterior"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            type="button"
+            class="project-modal__arrow project-modal__arrow--next"
+            aria-label="Próxima imagem"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+          <div class="project-modal__counter" id="modal-project-counter" aria-live="polite"></div>
+        </div>
+        <div class="project-modal__details">
+          <span class="project-modal__badge" id="modal-project-badge"></span>
+          <h2 id="modal-project-title"></h2>
+          <p id="modal-project-description"></p>
+          <div>
+            <h3>Tecnologias e ferramentas</h3>
+            <div class="project-modal__tags" id="modal-project-technologies"></div>
+          </div>
+          <div>
+            <h3>Minha participação</h3>
+            <p id="modal-project-contribution"></p>
+          </div>
+          <div>
+            <h3>O que aprendi</h3>
+            <p id="modal-project-learning"></p>
+          </div>
+          <div class="project-modal__links">
+            <a
+              href="#"
+              class="btn btn--primary"
+              id="modal-project-live"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto</a
+            ><a
+              href="#"
+              class="btn btn--secondary"
+              id="modal-project-github"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
