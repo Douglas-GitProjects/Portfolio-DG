@@ -40,12 +40,19 @@
   padding: 0;
 }
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 78px;
 }
 body {
+  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   overflow-x: hidden;
+  overflow-x: clip;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
@@ -57,6 +64,12 @@ body {
 body.modal-open,
 body.menu-open {
   overflow: hidden;
+}
+body.modal-open {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
 }
 a {
   color: inherit;
@@ -561,8 +574,11 @@ ul {
    TECNOLOGIAS E FERRAMENTAS
    ========================================================================== */
 .technologies {
+  width: 100%;
+  max-width: 100%;
   padding: 78px 0;
   overflow: hidden;
+  contain: paint;
   border-bottom: 1px solid var(--line);
   background: rgba(37, 99, 235, 0.035);
 }
@@ -581,7 +597,9 @@ ul {
 .technology-marquee {
   position: relative;
   width: 100%;
+  max-width: 100vw;
   overflow: hidden;
+  contain: paint;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   margin-top: 28px;
   height: 120px;

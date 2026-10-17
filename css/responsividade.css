@@ -21,6 +21,56 @@
    TABLETS E TELAS INTERMEDIÁRIAS
    ========================================================================== */
 
+@media (max-width: 900px) {
+  .project-modal {
+    width: min(calc(100% - 24px), 680px);
+    max-width: calc(100% - 24px);
+    height: calc(100dvh - 24px);
+    max-height: calc(100dvh - 24px);
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .project-modal__container {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .project-modal__visual {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    flex: 0 0 clamp(190px, 42dvh, 340px);
+  }
+  .project-modal__stage {
+    min-width: 0;
+    min-height: 0;
+    padding: 30px;
+  }
+  .project-modal__stage img {
+    min-width: 0;
+    max-height: 300px;
+  }
+  .project-modal__details {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+    overflow-wrap: anywhere;
+  }
+  .project-modal__details > *,
+  .project-modal__links,
+  .project-modal__links .btn {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
 @media (max-width: 820px) {
   .section {
     padding: 84px 0;
@@ -146,26 +196,6 @@
   }
   .contact__content {
     max-width: 600px;
-  }
-  .project-modal {
-    overflow: auto;
-  }
-  .project-modal__container {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  .project-modal__visual {
-    min-height: 430px;
-  }
-  .project-modal__stage {
-    min-height: 430px;
-    padding: 34px;
-  }
-  .project-modal__stage img {
-    max-height: 370px;
-  }
-  .project-modal__details {
-    overflow: visible;
   }
 }
 
@@ -299,24 +329,52 @@
     text-align: center;
   }
   .project-modal {
+    position: fixed;
+    inset: 10px;
     width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    height: calc(100dvh - 20px);
     max-height: calc(100dvh - 20px);
+    margin: auto;
+    border: 1px solid var(--border);
+    border-radius: 18px;
   }
   .project-modal__visual {
-    min-height: 360px;
+    flex-basis: clamp(230px, 40dvh, 310px);
   }
   .project-modal__stage {
-    min-height: 360px;
-    padding: 30px;
+    min-height: 0;
+    padding: 24px;
   }
   .project-modal__stage img {
-    max-height: 310px;
+    max-width: 100%;
+    max-height: min(270px, 34dvh);
+  }
+  .project-modal__visual.is-mobile .project-modal__stage img {
+    max-width: min(68%, 210px);
   }
   .project-modal__details {
-    padding: 42px 24px 28px;
+    padding: 34px 20px calc(28px + env(safe-area-inset-bottom));
   }
   .project-modal__details h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+  .project-modal__close {
+    position: fixed;
+    top: max(20px, calc(10px + env(safe-area-inset-top)));
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .project-modal__arrow {
+    width: 38px;
+    height: 38px;
+  }
+  .project-modal__arrow--previous {
+    left: 10px;
+  }
+  .project-modal__arrow--next {
+    right: 10px;
   }
   .project-modal__links {
     flex-direction: column;

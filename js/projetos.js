@@ -131,6 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeProject = null;
   let activeImage = 0;
   let touchStartX = 0;
+  let pageScrollPosition = 0;
+
+  const scrollPageImmediately = (top) => {
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, top);
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  };
 
   /* ------------------------------------------------------------------------
      CARROSSEL DE IMAGENS
@@ -166,7 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     modal.close();
     document.body.classList.remove('modal-open');
-    trigger?.focus();
+    document.body.style.top = '';
+    trigger?.focus({ preventScroll: true });
+    scrollPageImmediately(pageScrollPosition);
   };
 
   /* ------------------------------------------------------------------------
@@ -196,8 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (project.live) liveLink.href = project.live;
       if (project.github) githubLink.href = project.github;
       renderImage();
-      modal.showModal();
+      pageScrollPosition = window.scrollY;
+      scrollPageImmediately(pageScrollPosition);
+      document.body.style.top = `-${pageScrollPosition}px`;
       document.body.classList.add('modal-open');
+      modal.showModal();
       closeButton.focus();
     });
   });
