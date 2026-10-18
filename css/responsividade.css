@@ -214,7 +214,11 @@
     min-height: 66px;
   }
   .header__logo {
-    font-size: 1.75rem;
+    width: 54px;
+    height: 40px;
+  }
+  .header__logo img {
+    width: 58px;
   }
   .header__nav {
     top: 66px;
