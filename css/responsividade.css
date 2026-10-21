@@ -313,11 +313,15 @@
     gap: 2px;
   }
   .education__group li {
+    align-items: flex-start;
     flex-direction: column;
-    gap: 2px;
+    gap: 10px;
   }
   .education__group small {
     text-align: left;
+  }
+  .education__certificate {
+    min-height: 42px;
   }
   .contact__socials {
     flex-direction: column;
